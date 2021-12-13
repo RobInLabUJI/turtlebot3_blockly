@@ -15,7 +15,7 @@ SHELL ["/bin/bash", "-c"]
     
 RUN mkdir -p ~/catkin_ws/src && \
     cd ~/catkin_ws/src && \
-    git clone --recurse-submodules https://github.com/dabit-industries/turtlebot3_blockly && \
+    git clone --recurse-submodules https://github.com/RobInLabUJI/turtlebot3_blockly && \
     cd ~/catkin_ws && \
     source /opt/ros/noetic/setup.bash && catkin_make_isolated -j2 --pkg turtlebot3_blockly --install
 

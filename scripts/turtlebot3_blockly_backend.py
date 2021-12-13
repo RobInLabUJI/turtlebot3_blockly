@@ -492,8 +492,6 @@ class RobotBlocklyBackend(object):
         coro = loop.create_server(factory, '0.0.0.0', 9000)
         server = loop.run_until_complete(coro)
         #asyncio.async(RobotBlocklyBackend.wait_until_ros_node_shutdown(loop))
-        create_task = getattr(asyncio, 'async')
-        create_task(RobotBlocklyBackend.wait_until_ros_node_shutdown(loop))
 
         loop.run_forever()
 
